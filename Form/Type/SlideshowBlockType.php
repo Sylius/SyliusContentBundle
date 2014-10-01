@@ -13,13 +13,14 @@ namespace Sylius\Bundle\ContentBundle\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * Simple block type.
+ * Menu block type.
  *
  * @author Paweł Jędrzejewski <pjedrzejewski@diweb.pl>
  */
-class SimpleBlockType extends AbstractResourceType
+class SlideshowBlockType extends AbstractResourceType
 {
     /**
      * {@inheritdoc}
@@ -28,19 +29,22 @@ class SimpleBlockType extends AbstractResourceType
     {
         $builder
             ->add('parentDocument', null, array(
-                'label' => 'sylius.form.simple_block.parent'
+                'label' => 'sylius.form.slideshow_block.parent'
             ))
             ->add('name', 'text', array(
-                'label' => 'sylius.form.simple_block.internal_name'
+                'label' => 'sylius.form.slideshow_block.internal_name'
             ))
             ->add('title', 'text', array(
-                'label' => 'sylius.form.simple_block.title'
+                'label' => 'sylius.form.slideshow_block.title'
             ))
-            ->add('body', 'textarea', array(
-                'required' => false,
-                'label'    => 'sylius.form.simple_block.body',
-            ))
-        ;
+            ->add('children', 'collection', array(
+                       'type'         => 'sylius_imagine_block',
+                       'allow_add'    => true,
+                       'allow_delete' => true,
+                       'by_reference' => false,
+                       'label'        => 'sylius.form.slideshow_block.childrens'
+             ))
+            ;
 
     }
 
@@ -49,6 +53,6 @@ class SimpleBlockType extends AbstractResourceType
      */
     public function getName()
     {
-        return 'sylius_simple_block';
+        return 'sylius_slideshow_block';
     }
 }
