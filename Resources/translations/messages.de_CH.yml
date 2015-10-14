@@ -6,40 +6,39 @@ route: Route
 sylius:
   form:
     action_block:
-      action_name: Aktionsname
+      action_name: Name der Action
       id: ID
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
     imagine_block:
-      filter: Filtern
-      image: Foto
+      image: Bild
       internal_name: Interner Name
       label: Bezeichnung
-      parent: Übergeordnet
+      parent: Parent
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
       slideshow_medium: Slideshow mittel (Inhalt)
     menu:
-      childrens: Kind-Elemente
+      childrens: Childrens
       display: Anzeigen
-      display_children: Kind-Elemente anzeigen
+      display_children: Children anzeigen
       label: Bezeichnung
       name: Name
-      parent: Übergeordnet
+      parent: Parent
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
-      route: Pfad
+      route: Route
       uri: URI
     menu_block:
-      body: Inhalt
+      body: Body
       id: ID
       name: Name
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
     menu_node_block:
       content: Inhalt
-      display: Darstellung
-      display_children: Kind-Elemente anzeigen
+      display: Anzeigen
+      display_children: Children anzeigen
       internal_name: Interner Name
       label: Bezeichnung
       link_type: Link-Typ
@@ -50,10 +49,10 @@ sylius:
     redirect_route:
       id: ID
       name: Name
-      route_name: Name der Route
+      route_name: Route_name
       uri: URI
     reference_block:
-      body: Inhalt
+      body: Body
       id: ID
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
@@ -61,33 +60,30 @@ sylius:
     route:
       content: Inhalt
       name: Name
-      parent: Übergeordnet
+      parent: Parent
     simple_block:
-      body: Inhalt
+      body: Body
       internal_name: Interner Name
-      parent: Übergeordnet
+      parent: Parent
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
       title: Titel
     slideshow_block:
-      childrens: Kind-Elemente
+      childrens: Childrens
       internal_name: Interner Name
-      parent: Übergeordnet
+      parent: Parent
       publish_end_date: Enddatum der Veröffentlichung
       publish_start_date: Startdatum der Veröffentlichung
       title: Titel
     static_content:
-      body: Inhalt
+      body: Body
       id: ID
       internal_name: Interner Name
-      menu_nodes: Menüpunkte
-      parent: Übergeordnet
-      publish_end_date: Veröffentlichen bis
-      publish_start_date: Veröffentlichen von
-      routes: Pfade
+      publish_end_date: Enddatum der Veröffentlichung
+      publish_start_date: Startdatum der Veröffentlichung
       title: Titel
     string_block:
-      body: Inhalt
+      body: Body
       id: ID
       name: Name
       publish_end_date: Enddatum der Veröffentlichung
